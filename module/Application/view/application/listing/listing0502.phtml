@@ -2,14 +2,14 @@
 /**
  * ZF2 Buch Kapitel 5
  * 
- * Das Buch "Zend Framework 2 - Von den Grundlagen bis zur fertigen Anwendung"
- * von Ralf Eggert ist im Addison-Wesley Verlag erschienen. 
- * ISBN 978-3-8273-2994-3
+ * Das Buch "Zend Framework 2 - Das Praxisbuch"
+ * von Ralf Eggert ist im Galileo-Computing Verlag erschienen. 
+ * ISBN 978-3-8362-2610-3
  * 
  * @package    Application
  * @author     Ralf Eggert <r.eggert@travello.de>
  * @copyright  Alle Listings sind urheberrechtlich geschützt!
- * @link       http://www.zendframeworkbuch.de/ und http://www.awl.de/2994
+ * @link       http://www.zendframeworkbuch.de/ und http://www.galileocomputing.de/3460
  */
 
 /**
@@ -40,16 +40,16 @@ use Pizza\Service\OrderService;
 // configure event manager
 $eventManager = new EventManager();
 $eventManager->attach('postOrder', function ($e) {
-    echo "Send order confirmation<br />";
+    echo "Send order confirmation&lt;br /&gt;";
 }, 300);
 $eventManager->attach('postOrder', function ($e) {
-    echo "Update stock<br />";
+    echo "Update stock&lt;br /&gt;";
 }, 100);
 $eventManager->attach('postOrder', function ($e) {
-    echo "Bake the pizza<br />";
+    echo "Bake the pizza&lt;br /&gt;";
 }, 200);
 $eventManager->attach('preOrder', function ($e) {
-    echo "Check stock<br />";
+    echo "Check stock&lt;br /&gt;";
 });
 
 // configure order service
